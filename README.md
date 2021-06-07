@@ -1,6 +1,6 @@
 # Rover E-Bike React.JS Web Site
 
-This repo contains reover e-bike website front end application.
+This repo contains Rover E-bike website front end application.
 
 ### `yarn start`
 
