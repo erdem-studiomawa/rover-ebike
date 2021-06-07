@@ -26,17 +26,6 @@
   width: 100%;
 }
 
-.home .main-product .main-product-spotlight .r-initial-logo {
-  position: absolute;
-  right: 0;
-  bottom: 213px;
-  background-image: url("../../assets/images/R_initial.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 516px;
-  height: 361px;
-}
-
 .home .main-product .main-product-information {
   flex: 1;
   padding: 50px 100px 50px 100px;
