@@ -1,21 +1,31 @@
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./pages/home/home";
-import Header from "components/Header";
-import Footer from "components/Footer";
+import "./App.css";
+import HomePage from "./pages/home/home";
+import ProductPage from "./pages/product/product";
+import Layout from "components/Layout";
 
 function App() {
   document.title = "Rover E-Bike";
 
   return (
-    <div className="App">
-      <div className="loader"></div>
-      <div>
-        <Header></Header>
-        <Home></Home>
-        <Footer></Footer>
+    <BrowserRouter basename="/app">
+      <div className="App">
+        <div className="loader"></div>
+        <div>
+          <Layout>
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route path="/product">
+                <ProductPage />
+              </Route>
+            </Switch>
+          </Layout>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

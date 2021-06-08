@@ -3,14 +3,14 @@ import React from "react";
 import "./home.css";
 import setTitle from "../../tools.js";
 import promoVideo from "../../assets/images/promo_video.svg";
-import spotlightImage from "../../assets/images/e-bike.png";
 import spotlightImage2 from "../../assets/images/main_image.svg";
 import homeFooterImage from "../../assets/images/home_footer.png";
 import iconStar from "../../assets/icons/star.svg";
 import FindStore from "components/FindStrore";
+import Product from "components/Product";
 import Brands from "components/Brands";
 
-class Home extends React.Component {
+class HomePage extends React.Component {
   constructor() {
     super();
 
@@ -29,43 +29,9 @@ class Home extends React.Component {
             alt="Main Content Asset"
           />
         </div>
-        <div className="main-product">
-          <div className="main-product-spotlight">
-            <img src={spotlightImage} alt="Main product Image"></img>
-          </div>
-          <div className="main-product-information">
-            <h5 className="product-heading">
-              | ELITE <span>ROAD PERFORMANCE</span>
-            </h5>
-            <h3 className="product-name">
-              M080 <span>MOTOR</span>
-            </h3>
-            <h4 className="product-price">CAD 2,895</h4>
-            <div className="product-description">
-              <p>
-                Intelligent adjustment and powerful power output, specially
-                designed for high power and high torque output use scenarios.
-              </p>
-              <p>
-                Continuous power output can reach 350W; maximum torque output
-                ≥80Nm, easy to deal with various complex road conditions and
-                mountain terrain.
-              </p>
-            </div>
-            <div className="product-rotates">
-              <div className="product-rotate rx">
-                <span>X</span>
-              </div>
-              <div className="product-rotate ry">
-                <span>Y</span>
-              </div>
-            </div>
-            <div className="product-actions">
-              <a href="/" className="product-action add-to-cart"></a>
-              <a href="/" className="product-action check-out-now"></a>
-            </div>
-          </div>
-        </div>
+
+        <Product />
+
         <div className="center-content">
           <img src={spotlightImage2} alt="Center Content Asset" />
         </div>
@@ -99,4 +65,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default HomePage;
