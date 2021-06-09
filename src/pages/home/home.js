@@ -32,7 +32,10 @@ class HomePage extends React.Component {
           />
         </div>
 
-        <Product />
+        <div className="product-list">
+          <Product />
+          <Product />
+        </div>
 
         <div className="center-content">
           <img src={spotlightImage2} alt="Center Content Asset" />
