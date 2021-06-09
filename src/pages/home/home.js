@@ -6,7 +6,7 @@ import promoVideo from "../../assets/images/promo_video.svg";
 import spotlightImage2 from "../../assets/images/main_image.svg";
 import homeFooterImage from "../../assets/images/home_footer.png";
 import iconStar from "../../assets/icons/star.svg";
-import FindStore from "components/FindStrore";
+import FindStore from "components/FindStore";
 import Product from "components/Product";
 import Brands from "components/Brands";
 
@@ -23,9 +23,11 @@ class HomePage extends React.Component {
     return (
       <section className="home">
         <div className="main-content">
-          <img
+          <div
             className="main-content-item"
-            src={promoVideo}
+            style={{
+              backgroundImage: "url(" + promoVideo + ")",
+            }}
             alt="Main Content Asset"
           />
         </div>

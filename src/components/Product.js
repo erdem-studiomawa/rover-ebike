@@ -2,7 +2,7 @@ import React from "react";
 
 import "../assets/styles/Product.css";
 
-import spotlightImage from "../assets/images/e-bike.png";
+import spotlightImage from "../assets/images/e-bike.svg";
 
 class Product extends React.Component {
   render() {
@@ -12,9 +12,6 @@ class Product extends React.Component {
           className="main-product-spotlight"
           style={{
             backgroundImage: "url(" + spotlightImage + ")",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
           }}
         ></div>
         <div className="main-product-information">
