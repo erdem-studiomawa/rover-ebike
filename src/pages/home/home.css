@@ -17,6 +17,47 @@
 .home .product-list > *:first-child {
   margin-bottom: 10px;
 }
+
+.home .product-component {
+  padding: 66px 100px;
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.home .product-component .product-component-description {
+  width: 470px;
+}
+.home .product-component .product-component-description h4 {
+  font-family: Play;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 84px;
+  line-height: 97px;
+  color: #000000;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-top: 50px;
+}
+
+.home .product-component .product-component-description p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.home .product-component .product-component-image {
+}
+
 .home .center-content {
 }
 

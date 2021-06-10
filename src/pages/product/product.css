@@ -20,3 +20,9 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.product-page .bike-spec {
+  background-image: url("../../assets/images/product-page-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

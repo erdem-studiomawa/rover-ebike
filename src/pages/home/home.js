@@ -4,6 +4,7 @@ import "./home.css";
 import setTitle from "../../tools.js";
 import promoVideo from "../../assets/images/promo_video.svg";
 import spotlightImage2 from "../../assets/images/main_image.svg";
+import componentImage from "../../assets/images/home_product_component.svg";
 import homeFooterImage from "../../assets/images/home_footer.png";
 import iconStar from "../../assets/icons/star.svg";
 import FindStore from "components/FindStore";
@@ -33,6 +34,25 @@ class HomePage extends React.Component {
         </div>
 
         <Product />
+
+        <div className="product-component">
+          <div className="product-component-description">
+            <h4>D51 Display</h4>
+            <p>
+              The display's vibration feedback function ensures that every
+              operation is under control. The high-sensitivity sensor accurately
+              captures the rider's movements.
+            </p>
+            <p>
+              Combined with the automativve-level software and deep system
+              adjustment, the user experience is comparable to a mid-drive
+              system.
+            </p>
+          </div>
+          <div className="product-component-image">
+            <img src={componentImage} />
+          </div>
+        </div>
 
         <div className="center-content">
           <img src={spotlightImage2} alt="Center Content Asset" />
