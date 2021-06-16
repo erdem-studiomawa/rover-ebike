@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -256,4 +257,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cookie-popup {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  left: 100px;
+  bottom: 8%;
+  width: 500px;
+  height: 250px;
+
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  padding: 40px;
+
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.cookie-popup.active {
+  opacity: 1;
+}
+
+.cookie-popup p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+
+  text-align: left;
+  color: #ffffff;
+}
+
+.cookie-popup .button {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 10px 50px;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+  cursor: pointer;
 }

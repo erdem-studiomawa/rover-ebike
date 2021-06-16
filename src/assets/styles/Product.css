@@ -1,9 +1,9 @@
-.main-product {
+.product-page .main-product {
   display: flex;
   flex-direction: row;
 }
 
-.main-product .main-product-spotlight {
+.product-page .main-product .main-product-spotlight {
   flex: 2;
   position: relative;
 
@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
 }
 
-.main-product .main-product-spotlight img {
+.product-page .main-product .main-product-spotlight img {
   width: 100%;
 }
 
@@ -20,7 +20,7 @@
   padding-top: 170px;
 }
 
-.main-product .main-product-information {
+.product-page .main-product .main-product-information {
   flex: 1;
   padding: 50px 50px 50px 50px;
   display: flex;
@@ -29,7 +29,7 @@
   text-align: left;
 }
 
-.product-heading {
+.product-page .product-heading {
   font-family: Play;
   font-style: normal;
   font-weight: normal;
@@ -40,11 +40,11 @@
   margin-top: 20px;
 }
 
-.product-heading span {
+.product-page .product-heading span {
   color: #fff;
 }
 
-.product-name {
+.product-page .product-name {
   padding: 20px 0;
   font-family: Play;
   font-style: normal;
@@ -54,10 +54,10 @@
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.product-name span {
+.product-page .product-name span {
   font-size: 56px;
 }
-.product-price {
+.product-page .product-price {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
@@ -67,7 +67,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.product-description {
+.product-page .product-description {
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -79,27 +79,27 @@
   color: #e5e5e5;
 }
 
-.product-description p {
+.product-page .product-description p {
   margin-bottom: 20px;
 }
 
-.product-rotates {
+.product-page .product-rotates {
   display: flex;
   flex-direction: row;
 }
-.product-rotates .product-rotate {
+.product-page .product-rotates .product-rotate {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.product-rotates .product-rotate:first-child {
+.product-page .product-rotates .product-rotate:first-child {
   margin: 0;
 }
-.product-rotates .product-rotate {
+.product-page .product-rotates .product-rotate {
   margin: 0 10px;
 }
-.product-rotate.rx {
+.product-page .product-rotate.rx {
   width: 47px;
   height: 28px;
 
@@ -107,7 +107,7 @@
   border: 1px solid #8a1900;
   color: #8a1900;
 }
-.product-rotate.ry {
+.product-page .product-rotate.ry {
   width: 47px;
   height: 28px;
 
@@ -115,117 +115,25 @@
   border: 1px solid #ffffff;
   color: #fff;
 }
-.product-actions {
+.product-page .product-actions {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   margin-top: 70px;
 }
-.product-actions .product-action {
+.product-page .product-actions .product-action {
   height: 80px;
   width: 100%;
 }
 
-.product-actions .product-action.add-to-cart {
+.product-page .product-actions .product-action.add-to-cart {
   background-image: url("../images/button_add_to_cart.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.product-actions .product-action.check-out-now {
+.product-page .product-actions .product-action.check-out-now {
   background-image: url("../images/button_check_out.png");
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.bike-spec {
-  background-color: #000;
-  padding: 80px 100px;
-}
-
-.bike-spec .header {
-  font-family: Play;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 69px;
-  letter-spacing: 0em;
-  text-align: left;
-
-  color: #ffffff;
-
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 90px;
-}
-
-.bike-spec .header span {
-  font-family: Play;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 69px;
-  letter-spacing: 0em;
-  text-align: left;
-  padding-left: 10px;
-}
-
-.bike-spec .section-header {
-  font-family: Play;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
-
-  text-align: left;
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-
-  padding-bottom: 40px;
-}
-
-.bike-spec .spec-section {
-  color: #ffffff;
-}
-
-.bike-spec .spec-section .spec-grid {
-  display: flex;
-  flex-direction: row;
-  padding-left: 30%;
-  padding-top: 100px;
-}
-.bike-spec .spec-section .spec-grid .spec-grid-item {
-  padding: 20px;
-  flex: 1;
-  text-align: left;
-}
-.bike-spec .spec-section .spec-grid .spec-grid-item h4 {
-  font-family: Play;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
-  color: #ffffff;
-  max-width: 380px;
-  margin-bottom: 100px;
-}
-.bike-spec .spec-section .spec-grid .spec-grid-item p {
-  font-family: Arial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 37px;
-
-  max-width: 380px;
-  color: #e5e5e5;
-}
-
-.bike-spec .spec-section .spec-grid .spec-grid-item .sm {
-  font-family: Arial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-
-  display: block;
-  color: #e5e5e5;
 }

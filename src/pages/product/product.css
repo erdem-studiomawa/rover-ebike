@@ -1,28 +1,91 @@
-.product-actions {
+.bike-spec {
+  background-color: #000;
+  padding: 80px 100px;
+}
+
+.bike-spec .header {
+  font-family: Play;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 69px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 90px;
+}
+
+.bike-spec .header span {
+  font-family: Play;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 69px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.bike-spec .section-header {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+
+  text-align: left;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+
+  padding-bottom: 40px;
+}
+
+.bike-spec .spec-section {
+  color: #ffffff;
+}
+
+.bike-spec .spec-section .spec-grid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  padding-left: 30%;
+  padding-top: 100px;
+}
+.bike-spec .spec-section .spec-grid .spec-grid-item {
+  padding: 20px;
+  flex: 1;
+  text-align: left;
+}
+.bike-spec .spec-section .spec-grid .spec-grid-item h4 {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+  max-width: 380px;
+  margin-bottom: 100px;
+}
+.bike-spec .spec-section .spec-grid .spec-grid-item p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
 
-  margin-top: 70px;
-}
-.product-actions .product-action {
-  height: 80px;
-  width: 100%;
+  max-width: 380px;
+  color: #e5e5e5;
 }
 
-.product-actions .product-action.add-to-cart {
-  background-image: url("../../assets/images/button_add_to_cart.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.product-actions .product-action.check-out-now {
-  background-image: url("../../assets/images/button_check_out.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+.bike-spec .spec-section .spec-grid .spec-grid-item .sm {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
 
-.product-page .bike-spec {
-  background-image: url("../../assets/images/product-page-bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  display: block;
+  color: #e5e5e5;
 }
