@@ -16,16 +16,17 @@ class HomeProduct extends React.Component {
         ></div>
         <div className="home-product-information">
           <h5 className="product-heading">
-            <span>|</span> It's your <span>world</span>,
+            <span>|</span> It's your <span>world</span>, ride it!
           </h5>
           <h3 className="product-name">
-            <a href="/product">Ride it!</a>
+            <a href="/product">ROVER</a>
           </h3>
           <h4 className="product-price">CAD 2,895</h4>
           <div className="product-description">
             <p>
-              Enjoy your ride with ROVER e-bike. We keep our designs simple and
-              sleek so you can make ROVER a lifestyle!
+              Take on long distance and uphill adventures like a pro. With our
+              innovative Torque Sensor System, you can make any challenging
+              environment seems effortless.
             </p>
           </div>
           <div className="product-rotates">

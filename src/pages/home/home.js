@@ -41,20 +41,18 @@ class HomePage extends React.Component {
 
         <HomeProduct />
 
-        <div className="product-component">
+        <div
+          className="product-component"
+          style={{
+            backgroundImage: "url(" + componentImage + ")",
+          }}
+        >
           <div className="product-component-description">
-            <h4>
-              Make it <span>SMART</span>
-            </h4>
+            <h4>Make it smart</h4>
             <p>
               Accessorize your ROVER e-bike with a full-colour{" "}
-              <span>LED screen display</span>. Keep track of your speed, keep up
-              with your performance.
+              <span>LED screen display</span>.
             </p>
-            <p>A big upgrade for just a small price*</p>
-          </div>
-          <div className="product-component-image">
-            <img src={componentImage} />
           </div>
         </div>
 
