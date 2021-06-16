@@ -122,3 +122,13 @@
 .home-footer .home-footer-quote a {
   margin-top: 20px;
 }
+
+.home-footer .owl-carousel .owl-item .item {
+  width: 100%;
+  max-height: 764px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

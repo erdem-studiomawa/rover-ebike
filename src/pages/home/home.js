@@ -7,6 +7,7 @@ import componentImage from "../../assets/images/home_product_component.svg";
 import footerSlide1 from "../../assets/images/home_footer_slider/slide_1.svg";
 import footerSlide2 from "../../assets/images/home_footer_slider/slide_2.svg";
 import footerSlide3 from "../../assets/images/home_footer_slider/slide_3.svg";
+import footerSlide4 from "../../assets/images/home_footer_slider/slide_4.svg";
 import iconStar from "../../assets/icons/star.svg";
 import FindStore from "components/FindStore";
 import HomeProduct from "components/HomeProduct";
@@ -73,13 +74,16 @@ class HomePage extends React.Component {
             height="100%"
           >
             <div className="item">
-              <img src={footerSlide1} />
-            </div>
-            <div className="item">
               <img src={footerSlide2} />
             </div>
             <div className="item">
               <img src={footerSlide3} />
+            </div>
+            <div className="item">
+              <img src={footerSlide4} />
+            </div>
+            <div className="item">
+              <img src={footerSlide1} />
             </div>
           </OwlCarousel>
         </div>
