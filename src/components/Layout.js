@@ -12,12 +12,26 @@ class Layout extends React.Component {
     super();
     this.state = {
       menuStatus: false,
+      headerClass: "normal",
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      let headerClass = "normal";
+      let targetOffset = $("#main div div").height() + 400;
+      if (window.scrollY > targetOffset) {
+        headerClass = "fixed";
+      }
+
+      this.setState((prevState, props) => {
+        return { headerClass: headerClass };
+      });
+    });
   }
 
   toggleMenu() {
     this.setState((prevState, props) => {
-      console.log(prevState);
       return { menuStatus: !prevState.menuStatus };
     });
   }
@@ -25,7 +39,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-        <header className="App-header">
+        <header className={"App-header" + " " + this.state.headerClass}>
           <a
             href="/"
             className="rover-ebike-logo"
@@ -34,65 +48,61 @@ class Layout extends React.Component {
               backgroundImage: "url(" + logo + ")",
             }}
           ></a>
-          <div className="rover-xy-menu">
-            <a href="#">Rover X</a>
-            <a href="#">Rover Y</a>
-          </div>
+          <div className="rover-xy-menu"></div>
 
           <div className="header-sub">
             <div className="cart-logo">
               <a href="#"></a>
             </div>
-            <div className="main-menu">
-              <nav
-                className={this.state.menuStatus ? "navbar active" : "navbar"}
-              >
-                <div
-                  className="hamburger-menu"
-                  onClick={() => this.toggleMenu()}
-                >
-                  <div className="line line-1"></div>
-                  <div className="line line-2"></div>
-                  <div className="line line-3"></div>
-                </div>
 
-                <ul className="nav-list">
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      About Us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="/product" className="nav-link">
-                      Product
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      Contact
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      Support
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      Warranty
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+            <div
+              className={
+                "hamburger-menu" + (this.state.menuStatus ? " active" : "")
+              }
+              onClick={() => this.toggleMenu()}
+            >
+              <div className="line line-1"></div>
+              <div className="line line-2"></div>
+              <div className="line line-3"></div>
             </div>
+
+            <nav className={this.state.menuStatus ? "navbar active" : "navbar"}>
+              <ul className="nav-list">
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    About Us
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/product" className="nav-link">
+                    Product
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Contact
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Support
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Warranty
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </header>
-        {this.props.children}
+        <section id="main">{this.props.children}</section>
         <footer className="App-footer">
           <div className="footer-logo">
             <img

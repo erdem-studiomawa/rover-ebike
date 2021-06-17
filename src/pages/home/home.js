@@ -2,7 +2,7 @@ import React from "react";
 
 import "./home.css";
 import setTitle from "../../tools.js";
-import promoVideo from "../../assets/images/promo_video.svg";
+import promoVideo from "../../assets/movies/rover-e-Bike-short.mov";
 import componentImage from "../../assets/images/home_product_component.svg";
 import footerSlide1 from "../../assets/images/home_footer_slider/slide_1.svg";
 import footerSlide2 from "../../assets/images/home_footer_slider/slide_2.svg";
@@ -28,15 +28,16 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <section className="home">
+      <div className="home">
         <div className="main-content">
-          <div
+          {/* <div
             className="main-content-item"
             style={{
               backgroundImage: "url(" + promoVideo + ")",
             }}
             alt="Main Content Asset"
-          />
+          /> */}
+          <video src={promoVideo} muted loop autoPlay></video>
         </div>
 
         <HomeProduct />
@@ -85,7 +86,7 @@ class HomePage extends React.Component {
             </div>
           </OwlCarousel>
         </div>
-      </section>
+      </div>
     );
   }
 }
