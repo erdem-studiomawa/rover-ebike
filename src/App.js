@@ -19,25 +19,26 @@ function App() {
 
   useEffect(() => {
     // Update the document title using the browser API
-    console.log(cookies.policy);
-  });
+    console.log(cookies);
 
-  useEffect(() => {
-    return () => {
-      setTimeout(() => {
-        if (cookies.policy === 1) {
-          setHasCookieApprove(1);
-        } else {
-          setHasCookieApprove(0);
-        }
-      }, 1000);
-    };
+    setTimeout(() => {
+      if (cookies.policy === "1") {
+        setHasCookieApprove(1);
+      } else {
+        setHasCookieApprove(0);
+      }
+    }, 1000);
   }, []);
+
+  /* useEffect(() => {
+    return () => {
+      
+    };
+  }, []); */
 
   function cookieAgree() {
     setCookie("policy", 1, { path: "/" });
     setHasCookieApprove(1);
-    return false;
   }
 
   return (

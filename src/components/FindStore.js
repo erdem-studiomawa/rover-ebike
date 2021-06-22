@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/styles/FindStore.css";
-import mapAsset from "../assets/images/google_map_api.svg";
 import iconTruck from "../assets/icons/truck.svg";
 
 import GoogleMapReact from "google-map-react";
@@ -49,7 +48,7 @@ class FindStore extends React.Component {
           lat: 45.52,
           lng: -73.54,
         },
-        zoom: 8,
+        zoom: 10,
       },
     };
   }
@@ -57,6 +56,7 @@ class FindStore extends React.Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        console.log(position.coords);
         this.goToCoordsOnMap(
           position.coords.latitude,
           position.coords.longitude
@@ -95,7 +95,7 @@ class FindStore extends React.Component {
             lat: lat,
             lng: long,
           },
-          zoom: 5,
+          zoom: 15,
         },
       };
     });
@@ -155,10 +155,11 @@ class FindStore extends React.Component {
                 ? this.stores.find(
                     (store) => store.id === this.state.selectedStore
                   ).center
-                : null
+                : this.state.map.center
             }
-            defaultCenter={this.state.map.center}
-            defaultZoom={this.state.map.zoom}
+            zoom={this.state.map.zoom}
+            /* defaultCenter={} */
+            defaultZoom={5}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) =>
               this.handleApiLoaded(map, maps)
