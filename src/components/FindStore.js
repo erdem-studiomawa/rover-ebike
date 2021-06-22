@@ -43,15 +43,29 @@ class FindStore extends React.Component {
     super();
     this.state = {
       stores: this.stores,
-      selectedStore: 1,
+      selectedStore: 0,
       map: {
         center: {
           lat: 45.52,
           lng: -73.54,
         },
-        zoom: 11,
+        zoom: 8,
       },
     };
+  }
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        this.goToCoordsOnMap(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      },
+      function (error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+      }
+    );
   }
 
   findStore(e) {
@@ -70,6 +84,20 @@ class FindStore extends React.Component {
   showStoreOnMap(storeIndex) {
     this.setState((prevState, props) => {
       return { selectedStore: storeIndex };
+    });
+  }
+
+  goToCoordsOnMap(lat, long) {
+    this.setState((prevState, props) => {
+      return {
+        map: {
+          center: {
+            lat: lat,
+            lng: long,
+          },
+          zoom: 5,
+        },
+      };
     });
   }
 
@@ -127,7 +155,7 @@ class FindStore extends React.Component {
                 ? this.stores.find(
                     (store) => store.id === this.state.selectedStore
                   ).center
-                : {}
+                : null
             }
             defaultCenter={this.state.map.center}
             defaultZoom={this.state.map.zoom}

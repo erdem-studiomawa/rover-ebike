@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Layout from "components/Layout";
 import HomePage from "./pages/home";
+import AboutUsPage from "./pages/about-us/index";
 import ProductPage from "./pages/product/index";
 import ContactPage from "./pages/contact/index";
 import CheckoutPage from "./pages/checkout/index";
@@ -48,6 +49,9 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <HomePage />
+              </Route>
+              <Route path="/about-us">
+                <AboutUsPage />
               </Route>
               <Route path="/product">
                 <ProductPage />

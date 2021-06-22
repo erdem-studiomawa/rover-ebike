@@ -1,0 +1,47 @@
+.about-us-page .col-image {
+}
+.about-us-page .col-text {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us-page .col-text h4 {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+
+  text-align: center;
+
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+.about-us-page .col-text p {
+  width: 398px;
+
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+  color: var(--color-white);
+}
+
+.about-us-page .white-content {
+  background-color: var(--color-white);
+  padding: 100px 15%;
+  text-align: left;
+
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+
+  color: #000000;
+}
