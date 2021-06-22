@@ -6,6 +6,13 @@ import spotlightImage from "../assets/images/product/product1.svg";
 import roverLogo from "../assets/images/product/rover_logo.svg";
 
 class Product extends React.Component {
+  addToCart() {
+    $("#cart-badge")
+      .removeClass("hidden")
+      .find("span")
+      .text(parseInt($("#cart-badge span").text()) + 1);
+  }
+
   render() {
     return (
       <div className="main-product">
@@ -39,11 +46,14 @@ class Product extends React.Component {
             </div>
           </div>
           <div className="product-actions">
-            <div className="product-action add-to-cart">
+            <div
+              className="product-action add-to-cart"
+              onClick={() => this.addToCart()}
+            >
               <div className="icon">
                 <span></span>
               </div>
-              <a href="/">Add to cart</a>
+              <a href="#">Add to cart</a>
             </div>
             <div className="product-action check-out-now">
               <div className="icon">

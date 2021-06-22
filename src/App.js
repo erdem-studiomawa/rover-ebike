@@ -19,8 +19,6 @@ function App() {
 
   useEffect(() => {
     // Update the document title using the browser API
-    console.log(cookies);
-
     setTimeout(() => {
       if (cookies.policy === "1") {
         setHasCookieApprove(1);

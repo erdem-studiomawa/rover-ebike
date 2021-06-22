@@ -196,7 +196,7 @@
   transition: transform 500ms ease;
 }
 
-.product-actions .product-action a {
+.product-actions .product-action > * {
   font-family: Play;
   font-style: normal;
   font-weight: normal;

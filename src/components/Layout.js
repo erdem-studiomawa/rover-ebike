@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
+import useStore from "../lib/hooks/useStore";
 
 import logo from "../assets/images/logo.png";
 import {
@@ -58,6 +59,9 @@ class Layout extends React.Component {
           <div className="header-sub">
             <div className="cart-logo">
               <ShoppingCartOutlined />
+              <div id="cart-badge" className="cart-badge hidden">
+                <span>0</span>
+              </div>
             </div>
 
             <div
