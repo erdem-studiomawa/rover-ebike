@@ -13,6 +13,7 @@ import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
 import sectionImage4 from "../../assets/images/product/section-4.png";
 import sectionImage5 from "../../assets/images/product/section-5.svg";
 import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
+import promoImage from "../../assets/images/product/video-cover-bg.png";
 
 class ProductPage extends React.Component {
   constructor() {
@@ -108,7 +109,7 @@ class ProductPage extends React.Component {
         </div>
 
         <div className="product-section-video">
-          <video src={promoVideo} muted loop autoPlay></video>
+          <img src={promoImage} />
         </div>
 
         <div className="bike-spec">

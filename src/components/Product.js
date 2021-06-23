@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, setState } from "react";
 
 import "../assets/styles/Product.css";
 
@@ -13,6 +13,16 @@ import roverLogo from "../assets/images/product/rover_logo.svg";
 const Product = () => {
   const slideImages = [spotlightImage1, spotlightImage2];
 
+  const [productIndex, setProductIndex] = useState(0);
+
+  const products = [
+    {
+      frameSize: "49 - 53 cm",
+    },
+    {
+      frameSize: "50 - 54 cm",
+    },
+  ];
   const zoomOutProperties = {
     indicators: true,
     arrows: false,
@@ -20,6 +30,10 @@ const Product = () => {
     pauseOnHover: false,
     transitionDuration: 500,
     indicators: (i) => <span href="#" className="spotlight-pager"></span>,
+    onChange: function (oldIndex, ind) {
+      console.log(ind);
+      setProductIndex(ind);
+    },
   };
 
   const addToCart = () => {
@@ -57,12 +71,12 @@ const Product = () => {
           <p>
             Take on long distance and uphill adventures like a pro. With our
             innovative Torque Sensor System, you can make any challenging
-            environment seems effortless.
+            environment seems effortless
           </p>
           <p>
             Body length: 170 - 175 cm
             <br />
-            Frame size: 49 - 53 cm
+            Frame size: {products[productIndex].frameSize}
           </p>
         </div>
         <div className="product-rotates">
