@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
@@ -9,6 +9,7 @@ import FeaturedProducts from "../../components/FeaturedProducts";
 import sectionImage1 from "../../assets/images/product/section-1.png";
 import sectionImage2 from "../../assets/images/product/section-2.png";
 import sectionImage3 from "../../assets/images/product/section-3.png";
+import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
 import sectionImage4 from "../../assets/images/product/section-4.png";
 import sectionImage5 from "../../assets/images/product/section-5.svg";
 import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
@@ -20,6 +21,20 @@ class ProductPage extends React.Component {
     setTitle("Rover E-Bike | Product", true);
 
     this.state = {};
+    this.videoRef = React.createRef();
+  }
+
+  getVideo = (elem) => {
+    this.video = elem;
+  };
+
+  playVideo = () => {
+    this.video.play();
+  };
+
+  handlePlayVideo() {
+    console.log(this.videoRef);
+    //this.videoRef.current.play();
   }
 
   render() {
@@ -69,7 +84,12 @@ class ProductPage extends React.Component {
           </div>
 
           <div className="product-section-image">
-            <img src={sectionImage3} />
+            <video
+              ref={this.getVideo}
+              src={sectionMovie3}
+              muted
+              onClick={this.playVideo}
+            ></video>
           </div>
 
           <div className="product-section-image">

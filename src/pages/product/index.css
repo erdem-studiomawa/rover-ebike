@@ -5,6 +5,9 @@
   background-color: #fff;
   color: #444;
 }
+.product-page .section-wrapper > div {
+  min-height: 620px;
+}
 .product-page .section-wrapper > div h4 {
   font-family: Play;
   font-style: normal;
@@ -36,9 +39,11 @@
   color: var(--color-white);
 }
 
-.product-page .product-section-image img {
+.product-page .product-section-image > * {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .product-page .product-section-desc {
@@ -48,6 +53,7 @@
   flex-direction: column;
 
   width: 100%;
+  height: 100%;
 }
 .product-page .product-section-desc > div {
   width: 400px;
