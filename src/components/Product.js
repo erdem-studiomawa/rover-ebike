@@ -2,7 +2,9 @@ import React from "react";
 
 import "../assets/styles/Product.css";
 
-import spotlightImage from "../assets/images/product/product1.svg";
+//import spotlightImage from "../assets/images/product/product1.svg";
+import spotlightImage from "../assets/images/product/product-page-product-1.png";
+
 import roverLogo from "../assets/images/product/rover_logo.svg";
 
 class Product extends React.Component {
@@ -29,12 +31,20 @@ class Product extends React.Component {
           <h3 className="product-name">
             <img src={roverLogo} />
           </h3>
-          <h4 className="product-price">CAD 2,895</h4>
+          <h4 className="product-price">
+            <span className="product-old-price">CAD 2,895</span>
+            CAD 2,895
+          </h4>
           <div className="product-description">
             <p>
               Take on long distance and uphill adventures like a pro. With our
               innovative Torque Sensor System, you can make any challenging
               environment seems effortless.
+            </p>
+            <p>
+              Body length: 170 - 175 cm
+              <br />
+              Frame size: 49 - 53 cm
             </p>
           </div>
           <div className="product-rotates">
