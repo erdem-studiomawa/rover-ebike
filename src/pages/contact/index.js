@@ -11,7 +11,8 @@ import {
   Search,
 } from "@material-ui/icons";
 
-import FeaturedProducts from "../../components/FeaturedProducts";
+import Brands from "components/Brands";
+import FindStore from "components/FindStore";
 
 class ContactPage extends React.Component {
   constructor() {
@@ -110,12 +111,9 @@ class ContactPage extends React.Component {
           </div>
         </div>
 
-        <div
-          className="contact-footer-content"
-          style={{ backgroundImage: "url(" + footerImage + ")" }}
-        ></div>
-
-        <FeaturedProducts />
+        <FindStore />    
+        <Brands />
+        
       </div>
     );
   }
