@@ -13,6 +13,7 @@ import AboutUsPage from "./pages/about-us/index";
 import ProductPage from "./pages/product/index";
 import ContactPage from "./pages/contact/index";
 import CheckoutPage from "./pages/checkout/index";
+import WarrantyPage from "./pages/warranty/index";
 
 function App() {
   document.title = "Rover E-Bike";
@@ -65,6 +66,9 @@ function App() {
                   </Route>
                   <Route path="/checkout">
                     <CheckoutPage />
+                  </Route>
+                  <Route path="/warranty">
+                    <WarrantyPage />
                   </Route>
                 </Switch>
               </Layout>

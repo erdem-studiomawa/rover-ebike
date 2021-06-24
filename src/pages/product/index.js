@@ -6,12 +6,10 @@ import setTitle from "../../tools.js";
 import Product from "../../components/Product";
 import FeaturedProducts from "../../components/FeaturedProducts";
 
-import sectionImage1 from "../../assets/images/product/section-1.png";
-import sectionImage2 from "../../assets/images/product/section-2.png";
-import sectionImage3 from "../../assets/images/product/section-3.png";
+import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
+import sectionMovie2 from "../../assets/movies/3d_2_shocklock.mp4";
 import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
-import sectionImage4 from "../../assets/images/product/section-4.png";
-import sectionImage5 from "../../assets/images/product/section-5.svg";
+import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 import promoImage from "../../assets/images/product/video-cover-bg.png";
 
@@ -25,18 +23,37 @@ class ProductPage extends React.Component {
     this.videoRef = React.createRef();
   }
 
-  getVideo = (elem) => {
-    this.video = elem;
+  getVideo1 = (elem) => {
+    this.video1 = elem;
   };
 
-  playVideo = () => {
-    this.video.play();
+  playVideo1 = (elm) => {
+    this.video1.play();
   };
 
-  handlePlayVideo() {
-    console.log(this.videoRef);
-    //this.videoRef.current.play();
-  }
+  getVideo2 = (elem) => {
+    this.video2 = elem;
+  };
+
+  playVideo2 = (elm) => {
+    this.video2.play();
+  };
+
+  getVideo3 = (elem) => {
+    this.video3 = elem;
+  };
+
+  playVideo3 = (elm) => {
+    this.video3.play();
+  };
+
+  getVideo4 = (elem) => {
+    this.video4 = elem;
+  };
+
+  playVideo4 = (elm) => {
+    this.video4.play();
+  };
 
   render() {
     return (
@@ -58,11 +75,21 @@ class ProductPage extends React.Component {
           </div>
 
           <div className="product-section-image">
-            <img src={sectionImage1} />
+            <video
+              ref={this.getVideo1}
+              src={sectionMovie1}
+              muted
+              onClick={this.playVideo1}
+            ></video>
           </div>
 
           <div className="product-section-image">
-            <img src={sectionImage2} />
+            <video
+              ref={this.getVideo2}
+              src={sectionMovie2}
+              muted
+              onClick={this.playVideo2}
+            ></video>
           </div>
 
           <div className="product-section-desc even">
@@ -86,15 +113,20 @@ class ProductPage extends React.Component {
 
           <div className="product-section-image">
             <video
-              ref={this.getVideo}
+              ref={this.getVideo3}
               src={sectionMovie3}
               muted
-              onClick={this.playVideo}
+              onClick={this.playVideo3}
             ></video>
           </div>
 
           <div className="product-section-image">
-            <img src={sectionImage4} />
+            <video
+              ref={this.getVideo4}
+              src={sectionMovie4}
+              muted
+              onClick={this.playVideo4}
+            ></video>
           </div>
 
           <div className="product-section-desc even">

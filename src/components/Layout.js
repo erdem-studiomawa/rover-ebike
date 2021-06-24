@@ -122,11 +122,7 @@ const Layout = (props) => {
                   Contact
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="/support" className="nav-link">
-                  Support
-                </a>
-              </li>
+
               <li className="nav-item">
                 <a href="/warranty" className="nav-link">
                   Warranty
@@ -157,9 +153,7 @@ const Layout = (props) => {
             <li>
               <a href="/contact">Contact</a>
             </li>
-            <li>
-              <a href="/support">Support</a>
-            </li>
+
             <li>
               <a href="/warranty">Warranty</a>
             </li>

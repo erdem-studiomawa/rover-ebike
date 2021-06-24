@@ -1,12 +1,12 @@
 export const dummyProducts = [
   {
     id: 1,
-    name: "Rover X Black",
+    name: "ROVER X Black",
     price: 1899,
   },
   {
     id: 2,
-    name: "Rover Y Black",
+    name: "ROVER Y Black",
     price: 1999,
   },
   {
