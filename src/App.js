@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { StateProvider } from "./lib/providers/state";
-import model from "./lib/store/index";
+
+import ProductsContextProvider from "./contexts/ProductsContext";
+import CartContextProvider from "./contexts/CartContext";
 
 import "./App.css";
 import Layout from "components/Layout";
@@ -42,53 +43,55 @@ function App() {
   }
 
   return (
-    <StateProvider model={model}>
-      <BrowserRouter basename="/">
-        <div className="App">
-          <div className="loader"></div>
-          <div>
-            <Layout>
-              <Switch>
-                <Route exact path="/">
-                  <HomePage />
-                </Route>
-                <Route path="/about-us">
-                  <AboutUsPage />
-                </Route>
-                <Route path="/product">
-                  <ProductPage />
-                </Route>
-                <Route path="/contact">
-                  <ContactPage />
-                </Route>
-                <Route path="/checkout">
-                  <CheckoutPage />
-                </Route>
-              </Switch>
-            </Layout>
+    <ProductsContextProvider>
+      <CartContextProvider>
+        <BrowserRouter basename="/">
+          <div className="App">
+            <div className="loader"></div>
+            <div>
+              <Layout>
+                <Switch>
+                  <Route exact path="/">
+                    <HomePage />
+                  </Route>
+                  <Route path="/about-us">
+                    <AboutUsPage />
+                  </Route>
+                  <Route path="/product">
+                    <ProductPage />
+                  </Route>
+                  <Route path="/contact">
+                    <ContactPage />
+                  </Route>
+                  <Route path="/checkout">
+                    <CheckoutPage />
+                  </Route>
+                </Switch>
+              </Layout>
+            </div>
+            <div
+              className={
+                "cookie-popup" +
+                (hasCookieApprove > -1
+                  ? " " + (!hasCookieApprove ? "active" : "hidden")
+                  : "")
+              }
+            >
+              <p>
+                By using this website, you agree to our use of cookies. We use
+                cookies to provide you with a great experience and to help our
+              </p>
+              <p>
+                <a href="/cookie-policy">Privacy/cookies policy</a>
+              </p>
+              <button className="button" onClick={cookieAgree}>
+                I Agree
+              </button>
+            </div>
           </div>
-          <div
-            className={
-              "cookie-popup" +
-              (hasCookieApprove > -1
-                ? " " + (!hasCookieApprove ? "active" : "hidden")
-                : "")
-            }
-          >
-            <p>
-              By using this website, you agree to our use of cookies. We use
-              cookies to provide you with a great experience and to help our
-            </p>
-            <p>
-              <a href="/cookie-policy">Privacy/cookies policy</a>
-            </p>
-            <button className="button" onClick={cookieAgree}>
-              I Agree
-            </button>
-          </div>
-        </div>
-      </BrowserRouter>
-    </StateProvider>
+        </BrowserRouter>
+      </CartContextProvider>
+    </ProductsContextProvider>
   );
 }
 

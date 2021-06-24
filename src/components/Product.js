@@ -1,6 +1,9 @@
-import React, { useState, setState } from "react";
+import React, { useState, useContext } from "react";
 
 import "../assets/styles/Product.css";
+
+import { CartContext } from "../contexts/CartContext";
+import { ProductsContext } from "../contexts/ProductsContext";
 
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -11,11 +14,16 @@ import spotlightImage2 from "../assets/images/product/product-page-product-2.png
 import roverLogo from "../assets/images/product/rover_logo.svg";
 
 const Product = () => {
+  const { products } = useContext(ProductsContext);
+  const { addProduct, cartItems, increase } = useContext(CartContext);
+
+  const product = products.find((p) => p.id === 1);
+
   const slideImages = [spotlightImage1, spotlightImage2];
 
   const [productIndex, setProductIndex] = useState(0);
 
-  const products = [
+  const productFrames = [
     {
       frameSize: "49 - 53 cm",
     },
@@ -37,10 +45,7 @@ const Product = () => {
   };
 
   const addToCart = () => {
-    $("#cart-badge")
-      .removeClass("hidden")
-      .find("span")
-      .text(parseInt($("#cart-badge span").text()) + 1);
+    addProduct(product);
   };
 
   return (
@@ -65,7 +70,7 @@ const Product = () => {
         </h3>
         <h4 className="product-price">
           <span className="product-old-price">CAD 2,895</span>
-          CAD 2,895
+          CAD 1,899
         </h4>
         <div className="product-description">
           <p>
@@ -76,7 +81,7 @@ const Product = () => {
           <p>
             Body length: 170 - 175 cm
             <br />
-            Frame size: {products[productIndex].frameSize}
+            Frame size: {productFrames[productIndex].frameSize}
           </p>
         </div>
         <div className="product-rotates">

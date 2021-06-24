@@ -68,6 +68,7 @@
   background: #000000;
   border-radius: 30px;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .featured-products .items .item .plus {
