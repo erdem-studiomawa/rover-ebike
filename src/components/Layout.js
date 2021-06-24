@@ -10,7 +10,6 @@ import {
   LinkedIn,
   Twitter,
 } from "@material-ui/icons";
-import useStore from "lib/hooks/useStore";
 
 const Layout = (props) => {
   const [menuStatus, setMenuStatus] = useState(false);
