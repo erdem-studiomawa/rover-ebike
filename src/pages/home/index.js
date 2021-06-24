@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
-import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
+import promoVideoSource from "../../assets/movies/rover-e-Bike-short.mp4";
 import HomeProduct from "components/HomeProduct";
 
 class HomePage extends React.Component {
@@ -12,13 +12,23 @@ class HomePage extends React.Component {
     setTitle("Rover E-Bike | Home", true);
 
     this.state = {};
+    this.promoVideo = React.createRef();
+  }
+
+  componentDidMount() {
+    this.promoVideo.current.play();
   }
 
   render() {
     return (
       <div className="home">
         <div className="main-content">
-          <video src={promoVideo} muted loop autoPlay></video>
+          <video
+            ref={this.promoVideo}
+            src={promoVideoSource}
+            loop
+            autoPlay
+          ></video>
         </div>
 
         <div className="offer-text">
@@ -35,8 +45,7 @@ class HomePage extends React.Component {
             Different rates will be applied for US. Head to UPS website for more
             an estimated delivery fee.
           </p>
-        </div> 
-
+        </div>
       </div>
     );
   }
