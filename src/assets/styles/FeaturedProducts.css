@@ -71,6 +71,11 @@
   cursor: pointer;
 }
 
+.featured-products .items .item .add-to-cart:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
 .featured-products .items .item .plus {
   position: absolute;
   right: 0;
