@@ -4,6 +4,11 @@ import "./index.css";
 import setTitle from "../../tools.js";
 import promoVideoSource from "../../assets/movies/rover-e-Bike-short.mp4";
 import HomeProduct from "components/HomeProduct";
+import Grid from "components/Grid";
+import Reviews from "components/Reviews";
+
+import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
+import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -13,6 +18,7 @@ class HomePage extends React.Component {
 
     this.state = {};
     this.promoVideo = React.createRef();
+    this.sectionVideo = React.createRef();
   }
 
   componentDidMount() {
@@ -29,6 +35,9 @@ class HomePage extends React.Component {
             loop
             autoPlay
           ></video>
+          <a href="/product" className="learn-more-button">
+            Learn More
+          </a>
         </div>
 
         <div className="offer-text">
@@ -39,6 +48,81 @@ class HomePage extends React.Component {
         </div>
         <HomeProduct />
 
+        <div
+          className="section-wrapper"
+          onMouseEnter={() => {
+            this.sectionVideo.current.play();
+          }}
+        >
+          <div className="product-section-desc odd">
+            <div>
+              <h4>One of a kind torque sensor system.</h4>
+              <p>Guarantees the smoothest rides under any road condition.</p>
+            </div>
+          </div>
+
+          <div className="product-section-image">
+            <video ref={this.sectionVideo} src={sectionMovie1} muted></video>
+          </div>
+        </div>
+
+        <Grid
+          style={{
+            backgroundImage: "url(" + gridBackgroundImage + ")",
+            height: "890px",
+          }}
+          items={[
+            {
+              icon: "/img/icons/canadian-maple-leaf.svg",
+              title: "Canadian Own",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/thumbs-up.svg",
+              title: "Best Value",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/bike.svg",
+              title: "Torque Sensor",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/bike-rider.svg",
+              title: "Smoothest Ride",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/carbon_skill-level-advanced.svg",
+              title: "Upgradable",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/easy-fix.svg",
+              title: "Easy Fix",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/sun-clock.svg",
+              title: "Flexible Biking",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              icon: "/img/icons/shipping.svg",
+              title: "Shipping Ready",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+          ]}
+        />
+
         <div className="center-seperator">
           <h5>Free shipping and 7 days free return Canada wide.</h5>
           <p>
@@ -46,6 +130,29 @@ class HomePage extends React.Component {
             an estimated delivery fee.
           </p>
         </div>
+
+        <Reviews
+          items={[
+            {
+              name: "Tess J.",
+              image: "/img/reviews/review-1.png",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              name: "Devin W.",
+              image: "/img/reviews/review-2.png",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              name: "Paul A.",
+              image: "/img/reviews/review-3.png",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+          ]}
+        />
       </div>
     );
   }
