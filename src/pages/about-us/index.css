@@ -1,6 +1,10 @@
 .about-us-page {
   background-color: #242424;
 }
+.about-us-page .col-image {
+  height: 570px;
+  background-repeat: no-repeat;
+}
 .about-us-page .col-image img {
   width: 100%;
 }

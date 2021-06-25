@@ -25,9 +25,10 @@ class AboutUsPage extends React.Component {
         </div>
 
         <div className="row">
-          <div className="col col-image">
-            <img src={image1} />
-          </div>
+          <div
+            className="col col-image"
+            style={{ backgroundImage: "url(" + image1 + ")" }}
+          ></div>
           <div className="col col-text">
             <div>
               <h4>A unique experience</h4>
@@ -65,9 +66,10 @@ class AboutUsPage extends React.Component {
             </div>
           </div>
           <div className="col col-image">
-            <div className="col col-image">
-              <img src={image2} />
-            </div>
+            <div
+              className="col col-image"
+              style={{ backgroundImage: "url(" + image2 + ")" }}
+            ></div>
           </div>
         </div>
 
