@@ -42,8 +42,8 @@ class HomePage extends React.Component {
 
         <div className="offer-text">
           <p>
-            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
+            EXCLUSIVE OFFER FOR A LIMITED TIME ONLY - FIRST 50 ROVER E-BIKES ARE
+            NOW ON SALE FOR 1,899 CAD!
           </p>
         </div>
         <HomeProduct />
