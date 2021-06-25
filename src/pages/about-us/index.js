@@ -6,11 +6,13 @@ import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 import image1 from "../../assets/images/about-us/image1.png";
 import image2 from "../../assets/images/about-us/image2.png";
 
+import FeaturedArticles from "../../components/FeaturedArticles";
+
 class AboutUsPage extends React.Component {
   constructor() {
     super();
 
-    setTitle("Rover E-Bike | ", true);
+    setTitle("Rover E-Bike | About Us", true);
 
     this.state = {};
   }
@@ -71,7 +73,37 @@ class AboutUsPage extends React.Component {
             torque sensor system will make long distance or uphill easily
             without any pain.
           </p>
+          <a
+            href="/product"
+            class="button-dark"
+            style={{ float: "right", marginTop: "20px" }}
+          >
+            Explore our bikes
+          </a>
         </div>
+
+        <FeaturedArticles
+          items={[
+            {
+              title: "JOIN US ON OUR FIRST SOCIAL BIKE EVENT!",
+              content:
+                "Bring your bike and your smile. Join us on our 1st ever social 100 KM bike event. Together we will ride the world. <br/><br/>" +
+                "Snacks and coffee will be provided at the meet up place! <br/><br/>" +
+                "Date: September 1st, 2021" +
+                "Location: Stanley Park",
+            },
+            {
+              title: "Lorem ipsum dolor sid amet",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Lorem ipsum dolor sid amet",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+          ]}
+        />
       </div>
     );
   }
