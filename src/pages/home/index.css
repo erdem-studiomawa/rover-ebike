@@ -91,9 +91,12 @@
 .home .product-list > *:first-child {
   margin-bottom: 10px;
 }
-
+.home .section-wrapper {
+  display: flex;
+}
 .home .section-wrapper .product-section-desc {
   text-align: left;
+  flex: 1;
 }
 
 .home .section-wrapper > div p {
@@ -108,6 +111,8 @@
   color: var(--color-black);
 }
 .home .section-wrapper .product-section-image {
+  flex: 1.2;
+  height: 300px;
 }
 
 .home .section-wrapper .even {
