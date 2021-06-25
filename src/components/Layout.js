@@ -20,8 +20,7 @@ const Layout = (props) => {
     window.addEventListener("scroll", () => {
       let headerClass = "normal";
       let windowHeight = window.height;
-      let targetOffset =
-        $("#main div div").height() + (windowHeight >= 400 ? 400 : 0);
+      let targetOffset = 50;
       if (window.scrollY > targetOffset) {
         headerClass = "fixed";
       }
