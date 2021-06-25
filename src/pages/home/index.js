@@ -32,6 +32,7 @@ class HomePage extends React.Component {
           <video
             ref={this.promoVideo}
             src={promoVideoSource}
+            muted
             loop
             autoPlay
           ></video>
