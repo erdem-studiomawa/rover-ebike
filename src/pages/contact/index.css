@@ -123,7 +123,7 @@
 .contact-page .main-content .contact-area .contact-form .form-group button {
   color: var(--color-white);
   background: #828282;
-  border-radius: 30px;
+  border-radius: 5px;
 
   padding: 10px 20px;
   border: 0;
