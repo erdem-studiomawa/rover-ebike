@@ -129,7 +129,7 @@
 .bike-spec .spec-items {
   transition: 250ms all ease-in-out;
 }
-.bike-spec .spec-items-collapsed {
+.bike-spec .spec-items.collapsed {
   display: none;
   transition: 250ms all ease-in-out;
 }

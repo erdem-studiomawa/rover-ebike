@@ -217,7 +217,7 @@ class ProductPage extends React.Component {
               className={
                 this.state.displayAllSections
                   ? "spec-items"
-                  : "spec-items-collapsed"
+                  : "spec-items collapsed"
               }
             >
               <div className="spec-item">
