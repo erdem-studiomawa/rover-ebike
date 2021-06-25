@@ -29,15 +29,17 @@ class AboutUsPage extends React.Component {
             <img src={image1} />
           </div>
           <div className="col col-text">
-            <h4>A unique experience</h4>
-            <p>
-              We believe in raising the standard of torque sensor system and
-              promoting them.
-            </p>
-            <p>
-              We keep on working to strengthen e-bike standard in the market
-              with our unique collections.
-            </p>
+            <div>
+              <h4>A unique experience</h4>
+              <p>
+                We believe in raising the standard of torque sensor system and
+                promoting them.
+              </p>
+              <p>
+                We keep on working to strengthen e-bike standard in the market
+                with our unique collections.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -51,12 +53,16 @@ class AboutUsPage extends React.Component {
 
         <div className="row">
           <div className="col col-text">
-            <h4>Designed to impress</h4>
-            <p>
-              We take riding fashion trends very seriously. We are a team of
-              riding enthusiasts who love riding from the depth of our hearts.
-            </p>
-            <p>It is one of the reasons for us to launch a brand for e-bike.</p>
+            <div>
+              <h4>Designed to impress</h4>
+              <p>
+                We take riding fashion trends very seriously. We are a team of
+                riding enthusiasts who love riding from the depth of our hearts.
+              </p>
+              <p>
+                It is one of the reasons for us to launch a brand for e-bike.
+              </p>
+            </div>
           </div>
           <div className="col col-image">
             <div className="col col-image">
