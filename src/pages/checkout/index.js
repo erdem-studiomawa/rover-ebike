@@ -29,7 +29,6 @@ const CheckoutPage = () => {
     decrease,
   } = useContext(CartContext);
 
-  console.log(cartItems);
   return (
     <div className="checkout-page">
       <div className="rover-xy-menu">

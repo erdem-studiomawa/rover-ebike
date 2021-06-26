@@ -12,10 +12,11 @@ import Search from "components/Search";
 class ContactPage extends React.Component {
   constructor() {
     super();
-
-    setTitle("Rover E-Bike | Contact", true);
-
     this.state = {};
+  }
+
+  componentDidUpdate() {
+    setTitle("Contact");
   }
 
   render() {

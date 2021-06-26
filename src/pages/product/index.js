@@ -1,27 +1,37 @@
 import React from "react";
 
 import "./index.css";
+
 import setTitle from "../../tools.js";
 import Product from "../../components/Product";
+import Collapse from "../../components/Collapse";
+
 import FeaturedProducts from "../../components/FeaturedProducts";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionMovie2 from "../../assets/movies/3d_2_shocklock.mp4";
 import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
 import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
-import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
+
 import promoImage from "../../assets/images/product/video-cover-bg.png";
 
 class ProductPage extends React.Component {
   constructor() {
     super();
 
-    setTitle("Rover E-Bike | Product", true);
-
     this.state = {
       displayAllSections: false,
     };
     this.videoRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.setState({ video1IsLoading: true });
+  }
+
+  componentDidUpdate() {
+    setTitle("Product");
   }
 
   getVideo1 = (elem) => {
@@ -58,11 +68,13 @@ class ProductPage extends React.Component {
 
   displayAllSectionsHandler = () => {
     this.setState({
-      displayAllSections: true,
+      displayAllSections: !this.state.displayAllSections,
     });
   };
 
   render() {
+    const { video1IsLoading } = this.state;
+
     return (
       <div className="product-page">
         <div className="top-message">
@@ -85,11 +97,26 @@ class ProductPage extends React.Component {
           </div>
 
           <div className="product-section-image" onMouseEnter={this.playVideo1}>
-            <video ref={this.getVideo1} src={sectionMovie1} muted></video>
+            <React.Fragment>
+              {video1IsLoading}
+
+              <video
+                ref={this.getVideo1}
+                src={sectionMovie1}
+                muted
+                preload={"none"}
+                onLoadEnd={() => this.setState({ video1IsLoading: false })}
+              ></video>
+            </React.Fragment>
           </div>
 
           <div className="product-section-image" onMouseEnter={this.playVideo2}>
-            <video ref={this.getVideo2} src={sectionMovie2} muted></video>
+            <video
+              ref={this.getVideo2}
+              src={sectionMovie2}
+              muted
+              preload={"none"}
+            ></video>
           </div>
 
           <div
@@ -118,11 +145,21 @@ class ProductPage extends React.Component {
           </div>
 
           <div className="product-section-image" onMouseEnter={this.playVideo3}>
-            <video ref={this.getVideo3} src={sectionMovie3} muted></video>
+            <video
+              ref={this.getVideo3}
+              src={sectionMovie3}
+              muted
+              preload={"none"}
+            ></video>
           </div>
 
           <div className="product-section-image" onMouseEnter={this.playVideo4}>
-            <video ref={this.getVideo4} src={sectionMovie4} muted></video>
+            <video
+              ref={this.getVideo4}
+              src={sectionMovie4}
+              muted
+              preload={"none"}
+            ></video>
           </div>
 
           <div
@@ -191,7 +228,11 @@ class ProductPage extends React.Component {
                   className="collapse-start-button"
                   onClick={() => this.displayAllSectionsHandler()}
                 >
-                  <AddCircleOutlineIcon />
+                  {this.state.displayAllSections == false ? (
+                    <AddCircleOutlineIcon />
+                  ) : (
+                    <RemoveCircleOutlineIcon />
+                  )}
                 </span>
               </h3>
               <div className="spec-grid">
@@ -213,13 +254,8 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div
-              className={
-                this.state.displayAllSections
-                  ? "spec-items"
-                  : "spec-items collapsed"
-              }
-            >
+
+            <Collapse open={this.state.displayAllSections}>
               <div className="spec-item">
                 <h3 className="section-header">
                   BRAKES | DISC BRAKES | CHAINS | SADDLES
@@ -409,7 +445,7 @@ class ProductPage extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </Collapse>
           </div>
         </div>
         <FeaturedProducts />

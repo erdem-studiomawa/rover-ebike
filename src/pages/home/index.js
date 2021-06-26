@@ -16,13 +16,13 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
-    setTitle("Rover E-Bike | Home", true);
-
     this.state = {};
     this.promoVideo = React.createRef();
     this.sectionVideo1 = React.createRef();
     this.sectionVideo2 = React.createRef();
   }
+
+  componentDidUpdate() {}
 
   componentDidMount() {
     this.promoVideo.current.play();
