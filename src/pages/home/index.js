@@ -7,6 +7,8 @@ import HomeProduct from "components/HomeProduct";
 import Grid from "components/Grid";
 import Reviews from "components/Reviews";
 
+import landingImage from "../../assets/images/home-page-landing.png";
+
 import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
@@ -35,9 +37,12 @@ class HomePage extends React.Component {
           <video
             ref={this.promoVideo}
             src={promoVideoSource}
+            poster={landingImage}
             muted
             loop
-            autoPlay
+            autoPlay={true}
+            preload={"none"}
+            onLoad
           ></video>
           <div className="header-title">
             <h4>CHANGE THE WAY YOU RIDE</h4>
