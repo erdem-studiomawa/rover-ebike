@@ -13,6 +13,8 @@ import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionMovie2 from "../../assets/movies/3d_2_shocklock.mp4";
 import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
 import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
+import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
+import sectionImage1 from "../../assets/images/homepage-image.png";
 
 import promoImage from "../../assets/images/product/video-cover-bg.png";
 
@@ -162,15 +164,41 @@ class ProductPage extends React.Component {
             ></video>
           </div>
 
-          <div
-            className="product-section-desc even"
-            onMouseEnter={this.playVideo4}
-          >
+          <div className="product-section-desc" onMouseEnter={this.playVideo4}>
             <div>
               <h4>Powerful, light and quiet. </h4>
               <p>
                 With IP65 protection level, our motors are protected against
                 water jets at any angle.
+              </p>
+            </div>
+          </div>
+
+          <div className="product-section-desc">
+            <div>
+              <h4>SHIMANO 7-Speed Freewheel</h4>
+              <p>
+                Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t
+                Freewheel.
+              </p>
+            </div>
+          </div>
+
+          <div className="product-section-image">
+            <img src={sectionImage1} />
+          </div>
+
+          <div className="product-section-image">
+            <img src={sectionBatteryImage} />
+          </div>
+
+          <div className="product-section-desc">
+            <div>
+              <h4>High Capacity Battery</h4>
+              <p>
+                High Capacity Battery Detachable &amp; long lasting battery(36V,
+                14AH) provides convenient charging experience (fully charged
+                within 5hrs) and allows riding up to 160km.
               </p>
             </div>
           </div>

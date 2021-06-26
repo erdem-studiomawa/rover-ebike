@@ -31,11 +31,6 @@ const CheckoutPage = () => {
 
   return (
     <div className="checkout-page">
-      <div className="rover-xy-menu">
-        <a href="#">RoverX</a>
-        <a href="#">RoverY</a>
-      </div>
-
       <div className="checkout-wrapper">
         <div className="checkout-form">
           <h4>Personal Information</h4>
