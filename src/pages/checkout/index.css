@@ -145,7 +145,6 @@
 .checkout-page .checkout-wrapper .checkout-details .checkout-items {
   display: flex;
   flex-direction: column;
-  background: #000;
   padding-bottom: 20px;
 }
 .checkout-page
