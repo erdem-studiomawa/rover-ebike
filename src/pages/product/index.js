@@ -93,8 +93,12 @@ class ProductPage extends React.Component {
             onMouseEnter={this.playVideo1}
           >
             <div>
-              <h4>One of a kind torque sensor system.</h4>
-              <p>Guarantees the smoothest rides under any road condition.</p>
+              <h4>Mivice dual-sided torque sensor</h4>
+              <p>
+                Our fast responsive duel-sided torque sensor provides 
+                seemless power support and gives you the smoothest riding
+                experience. 
+              </p>
             </div>
           </div>
 
