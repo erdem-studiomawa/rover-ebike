@@ -13,6 +13,7 @@ import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
+import gridBackgroundImageMobile from "../../assets/images/home-page-grid-mobile-bg.png";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -53,10 +54,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>
-            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
-          </p>
+          <p>LIMITTED TIME OFFER FIRST 50 BIKES FOR ONLY CA$ 1,899 !</p>
         </div>
         <HomeProduct />
 
@@ -81,11 +79,7 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-        <div className="section-wrapper">
-          <div className="product-section-image">
-            <img src={sectionImage1} />
-          </div>
-
+        <div className="section-wrapper even">
           <div className="product-section-desc even">
             <div>
               <h4>SHIMANO 7-Speed Freewheel</h4>
@@ -94,6 +88,10 @@ class HomePage extends React.Component {
                 Freewheel.
               </p>
             </div>
+          </div>
+
+          <div className="product-section-image">
+            <img src={sectionImage1} />
           </div>
         </div>
 
@@ -118,6 +116,10 @@ class HomePage extends React.Component {
           style={{
             backgroundImage: "url(" + gridBackgroundImage + ")",
             height: "890px",
+          }}
+          mobileStyle={{
+            backgroundImage: "url(" + gridBackgroundImageMobile + ")",
+            height: "500px",
           }}
           items={[
             {
