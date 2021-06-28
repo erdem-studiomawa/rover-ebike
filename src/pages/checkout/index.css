@@ -13,9 +13,9 @@
 .checkout-page .main-content .main-content-bg {
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: top;
   z-index: 0;
 }
 
