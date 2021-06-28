@@ -28,8 +28,9 @@
   color: var(--color-white);
   background-image: url(../../assets/images/checkout-page-header.png);
   background-color: #000000;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 .checkout-page .checkout-wrapper .checkout-form {
   color: var(--color-white);
