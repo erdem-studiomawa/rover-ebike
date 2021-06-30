@@ -206,3 +206,10 @@
   border-color: #8a1900;
   color: #8a1900;
 }
+
+@media (max-width: 720px) {
+  .product-page .top-message p {
+    font-size: 12px;
+    line-height: 1em;
+  }
+}
