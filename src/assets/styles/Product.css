@@ -13,7 +13,6 @@
 }
 
 .product-page .top-message p {
-  font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -103,7 +102,6 @@
 }
 
 .product-page .product-heading {
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -119,7 +117,6 @@
 }
 
 .product-page .product-name {
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 80px;
@@ -138,7 +135,6 @@
 }
 
 .product-page .product-old-price {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -151,7 +147,6 @@
 }
 
 .product-page .product-price {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -164,7 +159,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   width: 305px;
-  font-family: Arial;
+
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

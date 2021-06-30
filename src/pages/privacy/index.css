@@ -29,7 +29,6 @@
 }
 
 .center-wrapper .center-content h4 {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 56px;
@@ -43,7 +42,6 @@
 }
 
 .center-content .center-content h5 {
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -53,7 +51,6 @@
 }
 
 .center-wrapper .center-content p {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -72,7 +69,6 @@
 
   padding: 30px 20px;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

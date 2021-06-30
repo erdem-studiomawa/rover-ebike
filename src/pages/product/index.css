@@ -9,7 +9,6 @@
   min-height: 620px;
 }
 .section-wrapper > div h4 {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 56px;
@@ -21,7 +20,6 @@
 }
 
 .section-wrapper > div p {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -80,7 +78,6 @@
 }
 
 .bike-spec .header {
-  font-family: Play;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -95,7 +92,6 @@
 }
 
 .bike-spec .header span {
-  font-family: Play;
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
@@ -106,7 +102,6 @@
 }
 
 .bike-spec .section-header {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -157,7 +152,6 @@
   text-align: left;
 }
 .bike-spec .spec-section .spec-grid .spec-grid-item h4 {
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -169,7 +163,6 @@
 }
 
 .bike-spec .spec-section .spec-grid .spec-grid-item h5 {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -180,7 +173,6 @@
   margin-bottom: 5px;
 }
 .bike-spec .spec-section .spec-grid .spec-grid-item p {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -193,7 +185,6 @@
 }
 
 .bike-spec .spec-section .spec-grid .spec-grid-item .sm {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

@@ -9,7 +9,6 @@
 }
 .reviews .reviews-desktop > h5 {
   display: inline-block;
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 90px;
@@ -66,7 +65,6 @@
 }
 
 .reviews .review-items .review-item .name {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -76,7 +74,6 @@
   margin-bottom: 30px;
 }
 .reviews .review-items .review-item .content {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
