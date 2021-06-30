@@ -16,7 +16,7 @@ export const dummyProducts = [
   {
     id: 3,
     name: "Rover Helmet",
-    price: 49.99,
+    price: 59.99,
     isFeatured: true,
     image: "/img/featured-product-1.svg",
   },
