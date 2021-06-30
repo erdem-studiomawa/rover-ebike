@@ -75,7 +75,12 @@ class HomePage extends React.Component {
           </div>
 
           <div className="product-section-image">
-            <video ref={this.sectionVideo1} src={sectionMovie1} muted></video>
+            <video
+              ref={this.sectionVideo1}
+              src={sectionMovie1}
+              muted
+              autoPlay
+            ></video>
           </div>
         </div>
 
