@@ -16,7 +16,6 @@ import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 
-import promoImage from "../../assets/images/product/video-cover-bg.png";
 
 class ProductPage extends React.Component {
   constructor() {
@@ -209,10 +208,6 @@ class ProductPage extends React.Component {
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="product-section-video">
-          <img src={promoImage} />
         </div>
 
         <div className="bike-spec">
