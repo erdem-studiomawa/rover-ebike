@@ -1,3 +1,7 @@
+export const additionalPrices = {
+  shipping: 100, // Default shipping price CAD
+  tax: 30, // Percentage of the total amount
+};
 export const dummyProducts = [
   {
     id: 1,

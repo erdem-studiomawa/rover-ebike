@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-import { loadStripe } from "@stripe/stripe-js";
 
 import "./index.css";
+import setTitle from "../../tools.js";
+
+import Paypal from "../../components/Paypal";
 
 import { CartContext } from "../../contexts/CartContext";
 import { formatNumber } from "../../helpers/utils";
-
-import setTitle from "../../tools.js";
 
 import { DeleteOutline, Search } from "@material-ui/icons";
 import mastercardIcon from "../../assets/icons/payment-methods/mastercard.png";
@@ -14,8 +14,6 @@ import visaIcon from "../../assets/icons/payment-methods/visa.png";
 import maestroIcon from "../../assets/icons/payment-methods/maestro.png";
 import americanexpressIcon from "../../assets/icons/payment-methods/americanexpress.png";
 import paypalIcon from "../../assets/icons/payment-methods/paypal.png";
-
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 const CheckoutPage = () => {
   useEffect(() => {
@@ -27,33 +25,6 @@ const CheckoutPage = () => {
   const [paymentMethod, setPaymentMethod] = useState();
   const [processing, setProcessing] = useState(false);
   const submitButtonRef = useRef();
-
-  const handleClick = async (event) => {
-    setProcessing(true);
-    if (paymentMethod === "stripe") {
-      const stripe = await stripePromise;
-      const response = await fetch(
-        "http://localhost:4242/create-checkout-session",
-        {
-          method: "POST",
-        }
-      );
-      const session = await response.json();
-      // When the customer clicks on the button, redirect them to Checkout.
-      const result = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
-      }
-    } else {
-      const response = await fetch("https://www.paypal.com/", {
-        method: "POST",
-      });
-    }
-  };
 
   return (
     <div className="checkout-page">
@@ -106,43 +77,6 @@ const CheckoutPage = () => {
             <div className="form-group">
               <label>*Zip/Postal Code</label>
               <input type={"text"}></input>
-            </div>
-
-            <h4>Payment</h4>
-            <div className="form-group">
-              <div className="payment-methods">
-                <div className="payment-method">
-                  <div className="payment-method-select">
-                    <input
-                      type="radio"
-                      name="payment-method"
-                      id="payment-method-cc"
-                      onClick={() => setPaymentMethod("stripe")}
-                    />
-                    <label for="payment-method-cc">Credit/Debit Cards</label>
-                  </div>
-                  <div className="payment-method-logos">
-                    <img src={visaIcon} />
-                    <img src={mastercardIcon} />
-                    <img src={maestroIcon} />
-                    <img src={americanexpressIcon} />
-                  </div>
-                </div>
-                <div className="payment-method">
-                  <div className="payment-method-select">
-                    <input
-                      type="radio"
-                      name="payment-method"
-                      id="payment-method-paypal"
-                      onClick={() => setPaymentMethod("paypal")}
-                    />
-                    <label for="payment-method-paypal">Paypal</label>
-                  </div>
-                  <div className="payment-method-logos">
-                    <img src={paypalIcon} width={50} />
-                  </div>
-                </div>
-              </div>
             </div>
 
             <h4>Billing Address</h4>
@@ -198,20 +132,11 @@ const CheckoutPage = () => {
                 </label>
               </div>
             </div>
-
-            <div className="form-group buttons">
-              {processing ? (
-                <button type={"button"}>...</button>
-              ) : (
-                <button
-                  type={"button"}
-                  onClick={() => {
-                    handleClick();
-                  }}
-                >
-                  Place Order
-                </button>
-              )}
+            <div className="payment-box">
+              <h4>Payment</h4>
+              <div className="form-group buttons">
+                <Paypal />
+              </div>
             </div>
           </form>
         </div>
