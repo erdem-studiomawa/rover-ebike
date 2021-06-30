@@ -58,6 +58,8 @@
   align-items: center;
 
   padding: 80px 50px;
+  width: calc(100% / 3);
+  height: 420px;
 }
 
 .reviews .review-items .review-item .image {
@@ -90,6 +92,7 @@
     background: #fff;
     background-image: none !important;
   }
+
   .reviews-desktop {
     display: none;
   }
@@ -102,6 +105,11 @@
   }
   .reviews-mobile .review-items {
     display: block;
+    padding: 40px 0;
+  }
+  .reviews .review-items .review-item {
+    width: 100%;
+    height: auto;
   }
   .reviews-mobile .review-item {
     width: calc(100vw);
@@ -114,5 +122,6 @@
   .reviews-mobile .review-items .review-item .content {
     width: 80%;
     text-align: center;
+    font-size: 16px;
   }
 }

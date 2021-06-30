@@ -172,7 +172,10 @@ class ProductPage extends React.Component {
             ></video>
           </div>
 
-          <div className="product-section-desc" onMouseEnter={this.playVideo4}>
+          <div
+            className="product-section-desc even"
+            onMouseEnter={this.playVideo4}
+          >
             <div>
               <h4>Powerful, light and quiet. </h4>
               <p>
@@ -200,7 +203,7 @@ class ProductPage extends React.Component {
             <img src={sectionBatteryImage} />
           </div>
 
-          <div className="product-section-desc">
+          <div className="product-section-desc even">
             <div>
               <h4>High Capacity Battery</h4>
               <p>
