@@ -127,6 +127,8 @@
 
 .bike-spec .section-header.collapse-start .collapse-start-button {
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bike-spec .spec-items {

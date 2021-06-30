@@ -163,10 +163,18 @@
     background: #c4c4c4;
   }
 
+  .featured-products .items .item .image img {
+    max-height: 200px;
+    width: auto;
+  }
+
   .product-actions.modal {
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
 
   .product-actions .product-action {

@@ -16,7 +16,6 @@ import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 
-
 class ProductPage extends React.Component {
   constructor() {
     super();
@@ -259,9 +258,9 @@ class ProductPage extends React.Component {
                   onClick={() => this.displayAllSectionsHandler()}
                 >
                   {this.state.displayAllSections == false ? (
-                    <AddCircleOutlineIcon />
+                    <AddCircleOutlineIcon fontSize="large" />
                   ) : (
-                    <RemoveCircleOutlineIcon />
+                    <RemoveCircleOutlineIcon fontSize="large" />
                   )}
                 </span>
               </h3>
