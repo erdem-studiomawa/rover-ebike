@@ -81,8 +81,8 @@ class ProductPage extends React.Component {
       <div className="product-page">
         <div className="top-message">
           <p>
-            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
+            LIMITTED TIME OFFER
+            <br /> FIRST 50 BIKES FOR ONLY CA$ 1,899 !
           </p>
         </div>
         <Product />
