@@ -25,7 +25,10 @@ class HomePage extends React.Component {
     this.sectionVideo2 = React.createRef();
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    this.sectionVideo1.current.defaultMuted = true;
+    this.sectionVideo1.current.muted = true;
+  }
 
   componentDidMount() {
     this.promoVideo.current.play();
@@ -80,6 +83,7 @@ class HomePage extends React.Component {
               src={sectionMovie1}
               muted
               autoPlay
+              playsInline
             ></video>
           </div>
         </div>
