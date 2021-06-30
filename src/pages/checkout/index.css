@@ -194,10 +194,10 @@
 }
 
 .checkout-page .payment-box {
-  background: #fff;
+  background: rgba(36, 36, 36, 0.8);
   padding: 20px;
 
-  color: #000;
+  color: #FFF;
   border-radius: 20px;
   margin-top: 30px;
 }
@@ -426,7 +426,7 @@
   width: 414px;
   height: 197px;
 
-  background: rgba(36, 36, 36, 0.8);
+  background: rgba(36, 36, 36, 0.5);
   border-radius: 20px;
 
   display: flex;
