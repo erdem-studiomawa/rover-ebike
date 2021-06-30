@@ -107,7 +107,6 @@ class ProductPage extends React.Component {
                 ref={this.getVideo1}
                 src={sectionMovie1}
                 muted
-                preload={"auto"}
                 autoPlay
               ></video>
             </React.Fragment>
