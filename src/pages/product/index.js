@@ -155,7 +155,7 @@ class ProductPage extends React.Component {
             <video
               ref={this.getVideo3}
               src={sectionMovie3}
-              muted
+              muted={"muted"}
               preload={"auto"}
             ></video>
           </div>
@@ -164,7 +164,7 @@ class ProductPage extends React.Component {
             <video
               ref={this.getVideo4}
               src={sectionMovie4}
-              muted
+              muted={"muted"}
               preload={"auto"}
             ></video>
           </div>
