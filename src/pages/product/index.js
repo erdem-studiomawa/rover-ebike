@@ -160,7 +160,11 @@ class ProductPage extends React.Component {
             ></video>
           </div>
 
-          <div className="product-section-image" onMouseEnter={this.playVideo4}>
+          <div
+            className="product-section-image"
+            onMouseEnter={this.playVideo4}
+            onFocus={this.playVideo4}
+          >
             <video
               ref={this.getVideo4}
               src={sectionMovie4}
