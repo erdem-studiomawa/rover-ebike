@@ -60,9 +60,6 @@ class HomePage extends React.Component {
 
         <div
           className="section-wrapper"
-          onMouseEnter={() => {
-            this.sectionVideo1.current.play();
-          }}
           onFocus={() => {
             this.sectionVideo1.current.play();
           }}
