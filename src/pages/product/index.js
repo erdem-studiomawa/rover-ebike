@@ -108,7 +108,7 @@ class ProductPage extends React.Component {
                 src={sectionMovie1}
                 muted
                 preload={"auto"}
-                onLoadEnd={() => this.setState({ video1IsLoading: false })}
+                autoPlay
               ></video>
             </React.Fragment>
           </div>
@@ -119,6 +119,7 @@ class ProductPage extends React.Component {
               src={sectionMovie2}
               muted
               preload={"auto"}
+              autoPlay
             ></video>
           </div>
 
@@ -157,6 +158,7 @@ class ProductPage extends React.Component {
               src={sectionMovie3}
               muted={"muted"}
               preload={"auto"}
+              autoPlay
             ></video>
           </div>
 
@@ -170,6 +172,7 @@ class ProductPage extends React.Component {
               src={sectionMovie4}
               muted={"muted"}
               preload={"auto"}
+              autoPlay
             ></video>
           </div>
 

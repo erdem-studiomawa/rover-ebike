@@ -20,7 +20,7 @@
   .react-slideshow-container
   + ul.indicators {
   position: absolute;
-  bottom: 100px;
+  top: 0;
   right: 100px;
   left: auto;
   height: 100%;
