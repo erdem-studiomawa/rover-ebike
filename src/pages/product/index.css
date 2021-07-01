@@ -75,6 +75,8 @@
   background-image: url("../../assets/images/product/spec-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  position: relative;
 }
 
 .bike-spec .header {
@@ -194,7 +196,18 @@
 
   color: #e5e5e5;
 }
+.bike-spec .collapse-start-button {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 
+  color: var(--color-white);
+
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: center; */
+}
 @media (max-width: 720px) {
   .section-wrapper > div {
     min-height: 420px;

@@ -259,19 +259,7 @@ class ProductPage extends React.Component {
               </div>
             </div>
             <div className="spec-item">
-              <h3 className="section-header collapse-start">
-                METRIX DISPLAY
-                <span
-                  className="collapse-start-button"
-                  onClick={() => this.displayAllSectionsHandler()}
-                >
-                  {this.state.displayAllSections == false ? (
-                    <AddCircleOutlineIcon fontSize="large" />
-                  ) : (
-                    <RemoveCircleOutlineIcon fontSize="large" />
-                  )}
-                </span>
-              </h3>
+              <h3 className="section-header collapse-start">METRIX DISPLAY</h3>
               <div className="spec-grid">
                 <div className="spec-grid-item">
                   <h4>SPORT Mode</h4>
@@ -480,6 +468,16 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </Collapse>
+          </div>
+          <div
+            className="collapse-start-button"
+            onClick={() => this.displayAllSectionsHandler()}
+          >
+            {this.state.displayAllSections == false ? (
+              <AddCircleOutlineIcon fontSize="large" />
+            ) : (
+              <RemoveCircleOutlineIcon fontSize="large" />
+            )}
           </div>
         </div>
         <FeaturedProducts />
