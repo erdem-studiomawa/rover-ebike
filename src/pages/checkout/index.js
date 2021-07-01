@@ -219,7 +219,11 @@ const CheckoutPage = () => {
             </div>
             <div className="form-group">
               <label>*Zip/Postal Code</label>
-              <input name={"zip_code"} type={"text"}></input>
+              <input
+                name={"zip_code"}
+                type={"text"}
+                onKeyUp={setFormValue}
+              ></input>
             </div>
 
             <h4>Billing Address</h4>
