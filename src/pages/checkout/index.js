@@ -104,15 +104,15 @@ const CheckoutPage = () => {
     }
   };
   const cityHandler = (e) => {
-    setSelectedCity(e.value);
-
     let selectedCity = null;
     if (e) {
+      setSelectedCity(e.value);
+
       if (country === "canada") {
         selectedCity = cities.canada.items.find(
           (city) => city.name === e.value
         );
-        console.log(selectedCity);
+
         if (selectedCity) {
           setTaxValue({
             amount:
