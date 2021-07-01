@@ -248,6 +248,7 @@
   .section-wrapper .section-1,
   .section-wrapper .section-2 {
     flex-direction: column;
+    text-align: center;
   }
   .product-section-video {
     height: autocle;
