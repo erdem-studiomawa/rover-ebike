@@ -45,7 +45,6 @@ class HomePage extends React.Component {
             muted
             loop
             autoPlay={true}
-            preload={"none"}
             onLoad
           ></video>
           <div className="header-title">
