@@ -236,7 +236,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div className="form-row">
-                <label>*City</label>
+                <label>*Province/State</label>
                 <Select
                   name={"city"}
                   ref={citySelectRef}
