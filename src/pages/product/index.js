@@ -88,7 +88,7 @@ class ProductPage extends React.Component {
         <div className="section-wrapper">
           <div className="section-1">
             <div
-              className="product-section-desc odd"
+              className="product-section-desc"
               onMouseEnter={this.playVideo1}
             >
               <div>
@@ -119,7 +119,7 @@ class ProductPage extends React.Component {
 
           <div className="section-2">
             <div
-              className="product-section-desc even"
+              className="product-section-desc"
               onMouseEnter={this.playVideo2}
             >
               <div>
@@ -214,7 +214,7 @@ class ProductPage extends React.Component {
           </div>
 
           <div className="section-2">
-            <div className="product-section-desc even">
+            <div className="product-section-desc">
               <div>
                 <h4>High Capacity Battery</h4>
                 <p>

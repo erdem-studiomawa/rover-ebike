@@ -23,6 +23,7 @@
 .section-wrapper .section-1 .product-section-desc {
   background-color: #f4f5f4;
   color: var(--color-black);
+  padding: 30px 0;
 }
 .section-wrapper .section-1 .product-section-desc * {
   color: var(--color-black);
@@ -30,6 +31,7 @@
 .section-wrapper .section-2 .product-section-desc {
   background-color: #242424;
   color: var(--color-white);
+  padding: 30px 0;
 }
 .section-wrapper .section-2 .product-section-desc * {
   color: var(--color-white);
