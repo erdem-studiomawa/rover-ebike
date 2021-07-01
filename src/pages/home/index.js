@@ -46,6 +46,7 @@ class HomePage extends React.Component {
             loop
             autoPlay={true}
             onLoad
+            playsInline
           ></video>
           <div className="header-title">
             <h4>CHANGE THE WAY YOU RIDE</h4>
