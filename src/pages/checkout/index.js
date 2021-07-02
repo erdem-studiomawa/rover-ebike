@@ -133,23 +133,28 @@ const CheckoutPage = () => {
     }
   };
   const cityHandler = (e) => {
+    let selectedState = null;
     let selectedCity = null;
     if (e) {
       setSelectedCity(e.value);
 
       if (country === "canada") {
-        selectedCity = cities.canada.items.find(
-          (city) => city.name === e.value
-        );
+        cities.canada.items.some((state) => {
+          let selectedCity = state.cities.find((city) => city === e.value);
+          if (selectedCity) {
+            selectedState = state;
+            return state;
+          }
+        });
 
-        if (selectedCity) {
+        if (selectedState) {
           setTaxValue({
             amount:
-              (parseFloat(total) * parseFloat(selectedCity.taxPercantage)) /
+              (parseFloat(total) * parseFloat(selectedState.taxPercantage)) /
               100,
-            value: selectedCity.taxPercantage,
+            value: selectedState.taxPercantage,
           });
-          setTotalAmount(calculateTotal(country, selectedCity));
+          setTotalAmount(calculateTotal(country, selectedState));
         }
       } else {
         setTaxValue({
@@ -187,6 +192,19 @@ const CheckoutPage = () => {
 
   const validateForm = () => {};
 
+  const formMessage = () => {
+    let message = "";
+    if (cartItems.length <= 0) {
+      message = "There are no item in your cart";
+    } else if (totalAmount <= 0) {
+      message = "Before payment please select your country and province/state";
+    }
+    return (
+      <div className="payment-error-message">
+        <p>{message}</p>
+      </div>
+    );
+  };
   return (
     <div className="checkout-page">
       <div className="checkout-wrapper">
@@ -311,7 +329,11 @@ const CheckoutPage = () => {
             <div className="payment-box">
               <h4>Payment</h4>
               <div className="form-group buttons">
-                {totalAmount > 0 ? <Paypal amount={totalAmount} /> : null}
+                {totalAmount > 0 ? (
+                  <Paypal amount={totalAmount} />
+                ) : (
+                  formMessage()
+                )}
               </div>
             </div>
           </form>
