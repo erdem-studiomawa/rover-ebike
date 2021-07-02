@@ -209,8 +209,11 @@
 }
 
 .contact-page .contact-form .error-message {
-  color: var(--color-red);
+  background-color: var(--color-red);
+  color: #f4f5f4;
+  padding: 10px 20px;
 }
+
 .contact-page .formSendingMessage {
   margin-left: auto;
   color: var(--color-white);

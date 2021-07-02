@@ -14,8 +14,10 @@ import Search from "components/Search";
 
 const ContactPage = () => {
   const [formValues, setFormValues] = useState({});
-  const [formValidation, setFormValidation] = useState(false);
+  const [formValidation, setFormValidation] = useState(true);
   const [formSendingStatus, setFormSendingStatus] = useState(0);
+  const [formError, setFormError] = useState();
+
   useEffect(() => {
     setTitle("Contact");
   }, []);
@@ -26,9 +28,54 @@ const ContactPage = () => {
     setFormValues(_formValues);
   };
 
+  const validateForm = () => {
+    let formInputs = [
+      { name: "name", label: "Name" },
+      { name: "email", label: "Email Address" },
+      { name: "message", label: "Message" },
+    ];
+
+    let status;
+    for (let fi of formInputs) {
+      if (
+        typeof formValues[fi.name] === "undefined" ||
+        formValues[fi.name].length <= 1
+      ) {
+        setFormError(fi.label + " is required");
+        status = false;
+        break;
+      }
+    }
+    if (status === false) {
+      setFormValidation(false);
+
+      return false;
+    } else if (typeof formValues["email"] !== "undefined") {
+      let lastAtPos = formValues["email"].lastIndexOf("@");
+      let lastDotPos = formValues["email"].lastIndexOf(".");
+
+      if (
+        !(
+          lastAtPos < lastDotPos &&
+          lastAtPos > 0 &&
+          formValues["email"].indexOf("@@") == -1 &&
+          lastDotPos > 2 &&
+          formValues["email"].length - lastDotPos > 2
+        )
+      ) {
+        setFormValidation(false);
+        setFormValidation(false);
+        setFormError("E-mail is not valid");
+        return false;
+      }
+    }
+
+    setFormValidation(true);
+    return true;
+  };
+
   const sendFormData = () => {
-    if (formValues["name"] && formValues["email"] && formValues["message"]) {
-      setFormValidation(true);
+    if (validateForm() === true) {
       setFormSendingStatus(1);
 
       const apiService = ApiService;
@@ -43,6 +90,8 @@ const ContactPage = () => {
           }
         })
         .catch((error) => {
+          setFormValidation(false);
+          setFormError("An error occured");
           setFormSendingStatus(2);
         });
     } else {
@@ -67,6 +116,20 @@ const ContactPage = () => {
             We appreciate you contacting us. One of our colleagues will get back
             in touch with you soon!Have a great day!
           </p>
+        </div>
+      </div>
+    );
+  };
+
+  const renderFormError = () => {
+    let message = "An error occured while sending contact form.";
+    if (formValues.length !== 3) {
+      message = "Please fill out the form";
+    }
+    return (
+      <div className="error-message">
+        <div>
+          <p>{formError}</p>
         </div>
       </div>
     );
@@ -146,6 +209,7 @@ const ContactPage = () => {
                 </div>
 
                 <div className="form-group">
+                  {formValidation === false ? renderFormError() : null}
                   {formSendingStatus === 1 ? (
                     formSendingMessage()
                   ) : (
